@@ -1,0 +1,2 @@
+1. Bug on Register Router. If given the wrong Login information there is no error.
+2. There is an issue with the update method. It does not allow for a user or an admin to change. currently needs to be both. 

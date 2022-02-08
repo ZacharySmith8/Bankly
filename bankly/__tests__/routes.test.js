@@ -74,7 +74,6 @@ describe("POST /auth/register", function() {
     });
   });
 });
-
 describe("POST /auth/login", function() {
   test("should allow a correct username/password to log in", async function() {
     const response = await request(app)

@@ -42,6 +42,7 @@ router.get('/:username', authUser, requireLogin, async function(
 ) {
   try {
     let user = await User.get(req.params.username);
+    console.log(req.params)
     return res.json({ user });
   } catch (err) {
     return next(err);
@@ -63,7 +64,7 @@ router.get('/:username', authUser, requireLogin, async function(
  *
  */
 
-router.patch('/:username', authUser, requireLogin, requireAdmin, async function(
+router.patch('/:username', authUser, requireLogin, async function(
   req,
   res,
   next

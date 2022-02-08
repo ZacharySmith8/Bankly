@@ -40,8 +40,10 @@ router.post('/login', async function(req, res, next) {
     const { username, password } = req.body;
     let user = User.authenticate(username, password);
     const token = createTokenForUser(username, user.admin);
+    console.log(res.statusCode)
     return res.json({ token });
-  } catch (err) {
+  } 
+  catch (err) {
     return next(err);
   }
 }); // end
